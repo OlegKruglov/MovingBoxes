@@ -1,0 +1,72 @@
+:root{
+    --dark-color:rgb(15, 55, 100,0.692);
+    --medium-color:rgb(243, 235, 235);
+    --light-color:rgba(11, 76, 151, 0.692);
+}
+
+*{
+    margin:0;
+    padding:0;  
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Sansita Swashed', cursive;
+    padding:2rem;
+}
+
+a{
+    text-decoration: none;
+    color: orangered;
+}
+
+.header{
+    height: 95vh;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, var(--light-color),var(--dark-color)),url('../img/nightsky.jpg');  
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    color:var(--medium-color);
+}
+
+.text-box{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-30%);
+}
+
+.heading-primary{
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft{
+    0%{transform: translateX(-100px);opacity: 0;}
+    80%{transform: translateX(20px);}
+    100%{transform: translateX(0);opacity: 1;}
+}
+
+.heading-primary-sub{
+    display:block;
+    font-size: 2rem;
+    letter-spacing: 0.6;
+    animation-name:moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight{
+    0%{transform: translateX(100px);opacity: 0;}
+    80%{transform: translateX(-20px);}
+    100%{transform: translateX(0);opacity: 1;}
+}
